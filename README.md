@@ -38,8 +38,18 @@ $ lazypass -s -l 20
 =OSC%u^$h!Pt&vL_]rJ!
 ```
 
+```
+// To generate password and copy to clipboard.
+$ lazypass -c
+
+Copied to clipboard
+```
+
+Note: `lazypass` is using `pbcopy` on Mac OS and `xclip` on Linux to copy password to clipboard.
+
 ## Options
 
 - `-l` length of password (default is 10)
 - `-n` password contains numbers (default false)
 - `-s` password contains symbols (default false)
+- `-c` copy password to clipboard (default false)
