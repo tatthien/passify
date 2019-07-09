@@ -14,7 +14,7 @@ go get github.com/tatthien/lazypass
 // To generate a password with length 16 (default length).
 $ lazypass
 
-KCncmRwhEw
+E!I$^3@v^QlCwacD
 ```
 
 
@@ -22,7 +22,7 @@ KCncmRwhEw
 // To generate a password with length 20.
 $ lazypass -l 20 
 
-=OSC%u^$h!Pt&vL_]rJ!
+HI7$A5-4A[xwIx?sns6Q
 ```
 
 ```
