@@ -9,14 +9,12 @@ import (
 )
 
 const (
-	DefaultLength int = 10
+	DefaultLength int = 16
 )
 
 func main() {
 	var lenPass int
 	flag.IntVar(&lenPass, "l", DefaultLength, "length of password")
-	containNumbers := flag.Bool("n", false, "password contains numbers (default false)")
-	containSymbols := flag.Bool("s", false, "password contains symbols (default false)")
 	copyPassword := flag.Bool("c", false, "copy password to clipboard (default false)")
 	flag.Parse()
 
@@ -24,7 +22,7 @@ func main() {
 		lenPass = DefaultLength
 	}
 
-	password := RandStringBytes(lenPass, *containNumbers, *containSymbols)
+	password := RandStringBytes(lenPass)
 
 	if *copyPassword {
 		arch := runtime.GOOS

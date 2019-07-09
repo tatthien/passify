@@ -13,15 +13,8 @@ func init() {
 	rand.Seed(time.Now().UnixNano())
 }
 
-func RandStringBytes(n int, containNumbers, containSymbols bool) string {
-	characterBytes := letterBytes
-
-	if containNumbers {
-		characterBytes += numberBytes
-	}
-	if containSymbols {
-		characterBytes += symbolBytes
-	}
+func RandStringBytes(n int) string {
+	characterBytes := letterBytes + numberBytes + symbolBytes
 
 	b := make([]byte, n)
 	for i := range b {
