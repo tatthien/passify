@@ -3,9 +3,9 @@ package main
 import (
 	"flag"
 	"fmt"
-	"runtime"
 	"log"
 	"os/exec"
+	"runtime"
 )
 
 const (
@@ -51,7 +51,8 @@ func main() {
 			log.Fatal(err)
 		}
 
-		fmt.Println("Copied to clipboard")
+		fmt.Println(password)
+		fmt.Println("> Copied to clipboard")
 	} else {
 		fmt.Print(password)
 	}

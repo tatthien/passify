@@ -7,7 +7,7 @@ import (
 
 const letterBytes = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const numberBytes = "0123456789"
-const symbolBytes = "!@#$%^&*()-_=+?[]{}"
+const symbolBytes = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~"
 
 func init() {
 	rand.Seed(time.Now().UnixNano())
