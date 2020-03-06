@@ -5,10 +5,12 @@ The CLI tool that generates random password for lazy dev. Inspired by [radomix b
 ## Install
 
 ```
-go get github.com/tatthien/lazypass
+go get github.com/tatthien/passify
 ```
 
 ## Usage
+
+> Make sure that you've already included the Go `bin` path in `$PATH`.
 
 ```
 // To generate a password with length 16 (default length).
@@ -20,19 +22,19 @@ E!I$^3@v^QlCwacD
 
 ```
 // To generate a password with length 20.
-$ lazypass -l 20 
+$ passify -l 20 
 
 HI7$A5-4A[xwIx?sns6Q
 ```
 
 ```
 // To generate a password and copy to clipboard.
-$ lazypass -c
+$ passify -c
 
 Copied to clipboard
 ```
 
-Note: `lazypass` is using `pbcopy` on Mac OS and `xclip` on Linux to copy password to clipboard.
+Note: `passify` is using `pbcopy` on Mac OS and `xclip` on Linux to copy password to clipboard.
 
 ## Options
 
