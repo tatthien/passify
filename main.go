@@ -15,7 +15,6 @@ const (
 func main() {
 	var lenPass int
 	flag.IntVar(&lenPass, "l", DefaultLength, "length of password")
-	copyPassword := flag.Bool("c", false, "copy password to clipboard (default false)")
 	flag.Parse()
 
 	if lenPass < 0 {
@@ -24,35 +23,32 @@ func main() {
 
 	password := RandStringBytes(lenPass)
 
-	if *copyPassword {
-		arch := runtime.GOOS
-		var copyCmd *exec.Cmd
+	arch := runtime.GOOS
+	var copyCmd *exec.Cmd
 
-		// Mac OS
-		if arch == "darwin" {
-			copyCmd = exec.Command("pbcopy")
-		}
-
-		// Linux
-		if arch == "linux" {
-			copyCmd = exec.Command("xclip")
-		}
-
-		in, err := copyCmd.StdinPipe()
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		if _, err := in.Write([]byte(password)); err != nil {
-			log.Fatal(err)
-		}
-
-		if err := copyCmd.Start(); err != nil {
-			log.Fatal(err)
-		}
-
-		fmt.Println(">>> Copied to clipboard <<<")
+	// Mac OS
+	if arch == "darwin" {
+		copyCmd = exec.Command("pbcopy")
 	}
 
+	// Linux
+	if arch == "linux" {
+		copyCmd = exec.Command("xclip")
+	}
+
+	in, err := copyCmd.StdinPipe()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if _, err := in.Write([]byte(password)); err != nil {
+		log.Fatal(err)
+	}
+
+	if err := copyCmd.Start(); err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println(">>> Copied to clipboard <<<")
 	fmt.Println("🔑", password)
 }
