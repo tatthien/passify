@@ -51,9 +51,8 @@ func main() {
 			log.Fatal(err)
 		}
 
-		fmt.Println(password)
-		fmt.Println("> Copied to clipboard")
-	} else {
-		fmt.Print(password)
+		fmt.Println(">>> Copied to clipboard <<<")
 	}
+
+	fmt.Println("🔑", password)
 }
