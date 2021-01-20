@@ -7,12 +7,13 @@ import (
 
 const letterBytes = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const numberBytes = "0123456789"
-const symbolBytes = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~"
+const symbolBytes = "!@#$%&"
 
 func init() {
 	rand.Seed(time.Now().UnixNano())
 }
 
+// RandStringBytes generates random string from character bytes
 func RandStringBytes(n int) string {
 	characterBytes := letterBytes + numberBytes + symbolBytes
 

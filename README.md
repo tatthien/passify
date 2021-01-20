@@ -16,7 +16,7 @@ go get github.com/tatthien/passify
 // To generate a password with length 16 (default length).
 $ lazypass
 
-E!I$^3@v^QlCwacD
+V%mrcCBU6yqa4ZDc
 ```
 
 
@@ -24,19 +24,11 @@ E!I$^3@v^QlCwacD
 // To generate a password with length 20.
 $ passify -l 20 
 
-HI7$A5-4A[xwIx?sns6Q
-```
-
-```
-// To generate a password and copy to clipboard.
-$ passify -c
-
-Copied to clipboard
+XUkL&1SvYGYf$TCk56ZW
 ```
 
 Note: `passify` is using `pbcopy` on Mac OS and `xclip` on Linux to copy password to clipboard.
 
 ## Options
 
-- `-l` length of password (default is 10)
-- `-c` copy password to clipboard (default is false)
+- `-l` length of password (default is 16)

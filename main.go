@@ -9,6 +9,7 @@ import (
 )
 
 const (
+	// DefaultLength is the default password length
 	DefaultLength int = 16
 )
 
@@ -49,6 +50,6 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(">>> Copied to clipboard <<<")
-	fmt.Println("🔑", password)
+	fmt.Println(">>> Copied to clipboard")
+	fmt.Println(password)
 }
