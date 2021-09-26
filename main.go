@@ -6,6 +6,8 @@ import (
 	"log"
 	"os/exec"
 	"runtime"
+
+	"github.com/tatthien/passify/pkg/random"
 )
 
 const (
@@ -22,7 +24,7 @@ func main() {
 		lenPass = DefaultLength
 	}
 
-	password := RandStringBytes(lenPass)
+	password := random.GetStringBytes(lenPass)
 
 	arch := runtime.GOOS
 	var copyCmd *exec.Cmd

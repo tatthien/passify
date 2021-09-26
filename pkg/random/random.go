@@ -1,4 +1,4 @@
-package main
+package random
 
 import (
 	"math/rand"
@@ -13,13 +13,15 @@ func init() {
 	rand.Seed(time.Now().UnixNano())
 }
 
-// RandStringBytes generates random string from character bytes
-func RandStringBytes(n int) string {
+// GetStringBytes generates random string from character bytes
+func GetStringBytes(strLen int) string {
 	characterBytes := letterBytes + numberBytes + symbolBytes
 
-	b := make([]byte, n)
+	b := make([]byte, strLen)
+
 	for i := range b {
 		b[i] = characterBytes[rand.Intn(len(characterBytes))]
 	}
+
 	return string(b)
 }
