@@ -8,6 +8,12 @@ The CLI tool that generates random password for lazy dev. Inspired by [radomix b
 go get github.com/tatthien/passify
 ```
 
+For non-Go users.
+
+```
+curl -sf https://gobinaries.com/tatthien/passify | sh
+```
+
 ## Usage
 
 > Make sure that you've already included the Go `bin` path in `$PATH`.
